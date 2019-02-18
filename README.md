@@ -6,6 +6,8 @@
 
 ## Project status
 
+[![Build Status](https://dev.azure.com/gbbigardi/Identity%20Server%20-%20Blazor%20Admin/_apis/build/status/IdentityServer.BlazorAdmin%20-%20CI?branchName=master)](https://dev.azure.com/gbbigardi/Identity%20Server%20-%20Blazor%20Admin/_build/latest?definitionId=66&branchName=master)
+
 This project is currently in **development**
 
 The application is written using **Blazor on Asp.Net Core - .NET Core 3.0**
