@@ -22,14 +22,13 @@ steps:
 
 - script: |
     mkdir $(Build.SourcesDirectory)\test-results
-    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests
-    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml test\IdentityServer.AspNetIdentity.Server.UnitTests
-    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml test\IdentityServer.AspNetIdentity.Server.IntegrationTests
-    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml test\IdentityServer.Blazor.Admin.Client.UnitTests
-    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml test\IdentityServer.Blazor.Admin.Server.UnitTests
-    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml test\IdentityServer.Blazor.Admin.Server.IntegrationTests
-    copy $(Build.SourcesDirectory)\test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml $(Build.SourcesDirectory)\test-results
-    .\reportgenerator "-reports:$(Build.SourcesDirectory)\test-results\coverage.cobertura.xml" "-targetdir:test-results" "-reporttypes:HTMLInline;HTMLChart"
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=$(Build.SourcessDirectory)\test-results\coverage test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=$(Build.SourcessDirectory)\test-results\coverage /p:MergeWith=$(Build.SourcesDirectory)\test-results\coverage.json test\IdentityServer.AspNetIdentity.Server.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=$(Build.SourcessDirectory)\test-results\coverage /p:MergeWith=$(Build.SourcesDirectory)\test-results\coverage.json test\IdentityServer.AspNetIdentity.Server.IntegrationTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=$(Build.SourcessDirectory)\test-results\coverage /p:MergeWith=$(Build.SourcesDirectory)\test-results\coverage.json test\IdentityServer.Blazor.Admin.Client.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=$(Build.SourcessDirectory)\test-results\coverage /p:MergeWith=$(Build.SourcesDirectory)\test-results\coverage.json test\IdentityServer.Blazor.Admin.Server.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=$(Build.SourcessDirectory)\test-results\coverage /p:CoverletOutputFormat=cobertura /p:MergeWith=$(Build.SourcesDirectory)\test-results\coverage.json test\IdentityServer.Blazor.Admin.Server.IntegrationTests
+    .\reportgenerator "-reports:$(Build.SourcesDirectory)\test-results\coverage.cobertura.xml" "-targetdir:test-results\Html" "-reporttypes:HTMLInline;HTMLChart"
   displayName: 'Unit and Integration tests'
 
 - task: PublishTestResults@2
@@ -40,5 +39,5 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     summaryFileLocation: $(Build.SourcesDirectory)\test-results\coverage.cobertura.xml
-    reportDirectory: $(Build.SourcesDirectory)\test-results
+    reportDirectory: $(Build.SourcesDirectory)\test-results\Html
     codecoverageTool: cobertura

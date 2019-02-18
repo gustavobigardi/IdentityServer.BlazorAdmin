@@ -1,6 +1,7 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Blazor.Admin.Server", "src\IdentityServer.Blazor.Admin.Server\IdentityServer.Blazor.Admin.Server.csproj", "{B87772EE-6A67-4694-8D99-27E2413ACEE6}"
 EndProject
@@ -10,25 +11,41 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Blazor.Admin
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8087CDC-4B0F-4A4B-BA9C-87FE3F7A8931}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdentity.Blazor.Client", "src\IdentityServer.AspNetIdentity.Blazor.Client\IdentityServer.AspNetIdentity.Blazor.Client.csproj", "{B455AABB-2844-405F-AA22-71CAC1BBDD28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AspNetIdentity.Blazor.Client", "src\IdentityServer.AspNetIdentity.Blazor.Client\IdentityServer.AspNetIdentity.Blazor.Client.csproj", "{B455AABB-2844-405F-AA22-71CAC1BBDD28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdentity.Server", "src\IdentityServer.AspNetIdentity.Server\IdentityServer.AspNetIdentity.Server.csproj", "{8F42FB74-91A8-405D-A10A-C4266EDA4312}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AspNetIdentity.Server", "src\IdentityServer.AspNetIdentity.Server\IdentityServer.AspNetIdentity.Server.csproj", "{8F42FB74-91A8-405D-A10A-C4266EDA4312}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdentity.Shared", "src\IdentityServer.AspNetIdentity.Shared\IdentityServer.AspNetIdentity.Shared.csproj", "{9F30761B-8606-4E1F-93CD-21E127719200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AspNetIdentity.Shared", "src\IdentityServer.AspNetIdentity.Shared\IdentityServer.AspNetIdentity.Shared.csproj", "{9F30761B-8606-4E1F-93CD-21E127719200}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{518D19FF-4F75-47BB-891A-78D5EBF32BBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdentity.Blazor.Client.UnitTests", "test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests.csproj", "{74E3CB44-73E3-4A23-94D3-98CA4BE910EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AspNetIdentity.Blazor.Client.UnitTests", "test\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests.csproj", "{74E3CB44-73E3-4A23-94D3-98CA4BE910EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdentity.Server.IntegrationTests", "test\IdentityServer.AspNetIdentity.Server.IntegrationTests\IdentityServer.AspNetIdentity.Server.IntegrationTests.csproj", "{54BDA1E9-C042-4FFD-BF6A-7EB14D2080AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AspNetIdentity.Server.IntegrationTests", "test\IdentityServer.AspNetIdentity.Server.IntegrationTests\IdentityServer.AspNetIdentity.Server.IntegrationTests.csproj", "{54BDA1E9-C042-4FFD-BF6A-7EB14D2080AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AspNetIdentity.Server.UnitTests", "test\IdentityServer.AspNetIdentity.Server.UnitTests\IdentityServer.AspNetIdentity.Server.UnitTests.csproj", "{B847F016-BAC1-4FB4-A532-F6CF00131B9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AspNetIdentity.Server.UnitTests", "test\IdentityServer.AspNetIdentity.Server.UnitTests\IdentityServer.AspNetIdentity.Server.UnitTests.csproj", "{B847F016-BAC1-4FB4-A532-F6CF00131B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Blazor.Admin.Client.UnitTests", "test\IdentityServer.Blazor.Admin.Client.UnitTests\IdentityServer.Blazor.Admin.Client.UnitTests.csproj", "{9B492CF6-7F11-4706-BCF8-DEC30C98103A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Blazor.Admin.Client.UnitTests", "test\IdentityServer.Blazor.Admin.Client.UnitTests\IdentityServer.Blazor.Admin.Client.UnitTests.csproj", "{9B492CF6-7F11-4706-BCF8-DEC30C98103A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Blazor.Admin.Server.IntegrationTests", "test\IdentityServer.Blazor.Admin.Server.IntegrationTests\IdentityServer.Blazor.Admin.Server.IntegrationTests.csproj", "{2FB7C54D-31B6-4281-80A4-9FAD77A58318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Blazor.Admin.Server.IntegrationTests", "test\IdentityServer.Blazor.Admin.Server.IntegrationTests\IdentityServer.Blazor.Admin.Server.IntegrationTests.csproj", "{2FB7C54D-31B6-4281-80A4-9FAD77A58318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Blazor.Admin.Server.UnitTests", "test\IdentityServer.Blazor.Admin.Server.UnitTests\IdentityServer.Blazor.Admin.Server.UnitTests.csproj", "{9C5BAB26-3FF3-4CBE-9C68-0800C317FF31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Blazor.Admin.Server.UnitTests", "test\IdentityServer.Blazor.Admin.Server.UnitTests\IdentityServer.Blazor.Admin.Server.UnitTests.csproj", "{9C5BAB26-3FF3-4CBE-9C68-0800C317FF31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STS", "STS", "{0677A31B-3BF9-47BB-833F-BC312466B133}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{411BE52E-0561-408D-A534-C2CBEA345895}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STS", "STS", "{401B1C1A-D329-4BDC-9599-AB7C6753ED75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{06F7C142-E885-46FD-90B0-DE75E9A00416}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B165790D-C297-4CFF-B63C-5848C62E8726}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,18 +57,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x64.Build.0 = Debug|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x86.Build.0 = Debug|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x64.ActiveCfg = Release|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x64.Build.0 = Release|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x86.ActiveCfg = Release|Any CPU
-		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x86.Build.0 = Release|Any CPU
 		{B87772EE-6A67-4694-8D99-27E2413ACEE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B87772EE-6A67-4694-8D99-27E2413ACEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B87772EE-6A67-4694-8D99-27E2413ACEE6}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -64,6 +69,18 @@ Global
 		{B87772EE-6A67-4694-8D99-27E2413ACEE6}.Release|x64.Build.0 = Release|Any CPU
 		{B87772EE-6A67-4694-8D99-27E2413ACEE6}.Release|x86.ActiveCfg = Release|Any CPU
 		{B87772EE-6A67-4694-8D99-27E2413ACEE6}.Release|x86.Build.0 = Release|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x64.Build.0 = Debug|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x64.ActiveCfg = Release|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x64.Build.0 = Release|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518}.Release|x86.Build.0 = Release|Any CPU
 		{3A971384-EC1B-4D8B-A3D8-D10EC81050DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A971384-EC1B-4D8B-A3D8-D10EC81050DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A971384-EC1B-4D8B-A3D8-D10EC81050DD}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -188,18 +205,25 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B87772EE-6A67-4694-8D99-27E2413ACEE6} = {411BE52E-0561-408D-A534-C2CBEA345895}
+		{9A6FE39C-C9EC-40CA-8B6F-22D15AA27518} = {411BE52E-0561-408D-A534-C2CBEA345895}
+		{3A971384-EC1B-4D8B-A3D8-D10EC81050DD} = {411BE52E-0561-408D-A534-C2CBEA345895}
+		{B455AABB-2844-405F-AA22-71CAC1BBDD28} = {0677A31B-3BF9-47BB-833F-BC312466B133}
+		{8F42FB74-91A8-405D-A10A-C4266EDA4312} = {0677A31B-3BF9-47BB-833F-BC312466B133}
+		{9F30761B-8606-4E1F-93CD-21E127719200} = {0677A31B-3BF9-47BB-833F-BC312466B133}
+		{74E3CB44-73E3-4A23-94D3-98CA4BE910EC} = {401B1C1A-D329-4BDC-9599-AB7C6753ED75}
+		{54BDA1E9-C042-4FFD-BF6A-7EB14D2080AB} = {401B1C1A-D329-4BDC-9599-AB7C6753ED75}
+		{B847F016-BAC1-4FB4-A532-F6CF00131B9C} = {401B1C1A-D329-4BDC-9599-AB7C6753ED75}
+		{9B492CF6-7F11-4706-BCF8-DEC30C98103A} = {06F7C142-E885-46FD-90B0-DE75E9A00416}
+		{2FB7C54D-31B6-4281-80A4-9FAD77A58318} = {06F7C142-E885-46FD-90B0-DE75E9A00416}
+		{9C5BAB26-3FF3-4CBE-9C68-0800C317FF31} = {06F7C142-E885-46FD-90B0-DE75E9A00416}
+		{0677A31B-3BF9-47BB-833F-BC312466B133} = {F8087CDC-4B0F-4A4B-BA9C-87FE3F7A8931}
+		{411BE52E-0561-408D-A534-C2CBEA345895} = {F8087CDC-4B0F-4A4B-BA9C-87FE3F7A8931}
+		{401B1C1A-D329-4BDC-9599-AB7C6753ED75} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
+		{06F7C142-E885-46FD-90B0-DE75E9A00416} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A787626-95B1-46A1-B989-B7E381EBB2E0}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B455AABB-2844-405F-AA22-71CAC1BBDD28} = {F8087CDC-4B0F-4A4B-BA9C-87FE3F7A8931}
-		{8F42FB74-91A8-405D-A10A-C4266EDA4312} = {F8087CDC-4B0F-4A4B-BA9C-87FE3F7A8931}
-		{9F30761B-8606-4E1F-93CD-21E127719200} = {F8087CDC-4B0F-4A4B-BA9C-87FE3F7A8931}
-		{74E3CB44-73E3-4A23-94D3-98CA4BE910EC} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
-		{54BDA1E9-C042-4FFD-BF6A-7EB14D2080AB} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
-		{B847F016-BAC1-4FB4-A532-F6CF00131B9C} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
-		{9B492CF6-7F11-4706-BCF8-DEC30C98103A} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
-		{2FB7C54D-31B6-4281-80A4-9FAD77A58318} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
-		{9C5BAB26-3FF3-4CBE-9C68-0800C317FF31} = {518D19FF-4F75-47BB-891A-78D5EBF32BBF}
 	EndGlobalSection
 EndGlobal
