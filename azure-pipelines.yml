@@ -7,11 +7,38 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'VS2017-Win2016'
 
 variables:
   buildConfiguration: 'Release'
 
 steps:
+- script: |
+    dotnet tool install dotnet-reportgenerator-globaltool --tool-path . --version 4.0.0-rc4
+  displayName: Install required tooling
+
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- script: |
+    mkdir $(Build.SourcesDirectory)\test-results
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml src\IdentityServer.AspNetIdentity.Server.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml src\IdentityServer.AspNetIdentity.Server.IntegrationTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml src\IdentityServer.Blazor.Admin.Client.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml src\IdentityServer.Blazor.Admin.Server.UnitTests
+    dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:MergeWtih=$(Build.SourcesDirectory)\src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml src\IdentityServer.Blazor.Admin.Server.IntegrationTests
+    copy $(Build.SourcesDirectory)\src\IdentityServer.AspNetIdentity.Blazor.Client.UnitTests\coverage.cobertura.xml $(Build.SourcesDirectory)\test-results
+    .\reportgenerator "-reports:$(Build.SourcesDirectory)\test-results\coverage.cobertura.xml" "-targetdir:test-results" "-reporttypes:HTMLInline;HTMLChart"
+  displayName: 'Unit and Integration tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
+    
+- task: PublishCodeCoverageResults@1
+  inputs:
+    summaryFileLocation: $(Build.SourcesDirectory)\test-results\coverage.cobertura.xml
+    reportDirectory: $(Build.SourcesDirectory)\test-results
+    codecoverageTool: cobertura
