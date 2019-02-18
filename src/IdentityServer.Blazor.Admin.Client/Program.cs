@@ -7,6 +7,7 @@ namespace IdentityServer.Blazor.Admin.Client
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            //XPTO
         }
 
         public static IWebAssemblyHostBuilder CreateHostBuilder(string[] args) =>
